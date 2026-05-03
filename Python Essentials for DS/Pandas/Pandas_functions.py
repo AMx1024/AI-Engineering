@@ -136,7 +136,6 @@ print("\nisnull():\n", df_clean.isnull())
 print("notnull():\n", df_clean.notnull())
 print("dropna():\n", df_clean.dropna())
 print("fillna(0):\n", df_clean.fillna(0))
-print("ffill:\n", df_clean.fillna(method='ffill'))
 
 # Duplicates
 df_dup = pd.DataFrame({'A': [1,1,2,2], 'B': [10,10,20,30]})
@@ -175,9 +174,6 @@ print("\napply (sqrt to A):\n", df_trans['A'].apply(np.sqrt))
 
 # map
 print("map on B (square):\n", df_trans['B'].map(lambda x: x**2))
-
-# applymap (element-wise on DataFrame)
-print("applymap (multiply by 10):\n", df_trans.applymap(lambda x: x*10))
 
 # replace
 df_rep = pd.DataFrame({'X': [1,2,3,2], 'Y': [4,5,6,5]})
